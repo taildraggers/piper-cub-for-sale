@@ -199,7 +199,7 @@ EXCLUDE_KEYWORDS = [
     "connecting rods", "stc", "governor", "governors", "winter front", "winter fronts",
     "spray boom", "spray booms", "hopper", "hoppers", "spreader", "spreaders",
     "nozzle", "nozzles", "valve", "valves", "shock", "shocks", "rubber",
-    "intake", "intakes",
+    "intake", "intakes", "heat muff", "heat muffs", "connector", "connectors",
     "raffle", "win a", "win an", "enter to win", "rental", "ferry pilot",
     "ferry service",
     "flight training", "instruction", "insurance", "financing", "wanted",
