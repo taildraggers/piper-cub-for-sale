@@ -1,7 +1,7 @@
 """Scraper for Piper Cub aircraft listings on barnstormers.com.
 
 Listings come from a Barnstormers advanced search on the ad headline
-"Piper Cub". Only whole-aircraft-for-sale listings are published: each ad's
+"J-3". Only whole-aircraft-for-sale listings are published: each ad's
 title is matched against a known Piper Cub model code/name, and titles that
 look like parts/accessories/services/raffles are dropped. Surviving titles
 are rewritten to a canonical "YEAR Piper MODEL" form so every listing follows
@@ -27,9 +27,9 @@ SITE_NAME = "Barnstormers.com"
 BASE = "https://www.barnstormers.com"
 MAKE = "Piper"
 
-# Barnstormers advanced search for ads whose headline contains "Piper Cub".
+# Barnstormers advanced search for ads whose headline contains "J-3".
 SEARCH_URLS = [
-    f"{BASE}/cat_search.php?headline=Piper+Cub&body=&part_num=&mfg=&model="
+    f"{BASE}/cat_search.php?headline=J-3&body=&part_num=&mfg=&model="
     "&user__profile__company=&user__last_name=&user__first_name="
     "&user__profile__country=&specialcase__state=&user__profile__city="
     "&user__profile__uzip=&specialcase__phone=&user__email=&my_cats__name="
@@ -56,7 +56,7 @@ _MODEL_CODE_RULES = [
     (re.compile(r"\bl\s?-?\s?4(?!\d)", re.IGNORECASE), "L-4 Grasshopper"),
 ]
 # Fallbacks when no model code is present, most specific first. A bare
-# "Cub" is last, since every search hit's headline contains "Piper Cub".
+# "Cub" is last, as a catch-all for Cub ads that state no model.
 _MODEL_NAME_RULES = [
     (re.compile(r"super\s*cub", re.IGNORECASE), "PA-18 Super Cub"),
     (re.compile(r"super\s*cruiser", re.IGNORECASE), "PA-12 Super Cruiser"),

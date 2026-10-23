@@ -7,7 +7,7 @@ Daily aggregator of Piper Cub aircraft classified listings from
 ## How it works
 
 - `scraper/barnstormers.py` runs a Barnstormers advanced search for ads whose
-  headline contains **"Piper Cub"**, walks the result pages (`&page=N`) until a page
+  headline contains **"J-3"**, walks the result pages (`&page=N`) until a page
   turns up no new ads, then visits each listing's detail page to pull out the price,
   location, and posted date (falling back to regex heuristics over the visible text
   since the site doesn't expose structured data). The title is derived from the
